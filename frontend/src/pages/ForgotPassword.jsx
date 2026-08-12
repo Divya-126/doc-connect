@@ -5,8 +5,11 @@ import LandingImage from "../componenets/LandingImage";
 import { Eye, EyeOff, Lock, Mail, ShieldCheck } from "lucide-react";
 import LoaderText from "../componenets/Loader";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const ForgotPassword = () => {
+  const { backendurl } = useContext(AppContext);
   const [state, setState] = useState("email");
   const [open, setOpen] = useState(false);
   const [openCon, setOpenCon] = useState(false);
@@ -36,7 +39,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          "http://localhost:4000/api/user/forgot-password",
+          `${backendurl}/api/user/forgot-password`,
           {
             email,
           },
@@ -62,7 +65,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          "http://localhost:4000/api/user/verify-reset-otp",
+          `${backendurl}/api/user/verify-reset-otp`,
           {
             email,
             otp,
@@ -99,7 +102,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          "http://localhost:4000/api/user/change-password",
+          `${backendurl}/api/user/change-password`,
           {
             email,
             otp,
