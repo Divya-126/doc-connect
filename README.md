@@ -278,6 +278,7 @@ Doc-Connect/
 │   ├── postcss.config.js
 │   ├── README.md
 │   ├── tailwind.config.js
+│   ├── vercel.json
 │   └── vite.config.js
 ├── .gitignore
 └── README.md
@@ -628,6 +629,7 @@ Doc-Connect/
 │   ├── postcss.config.js
 │   ├── README.md
 │   ├── tailwind.config.js
+│   ├── vercel.json
 │   └── vite.config.js
 ├── .gitignore
 └── README.md
