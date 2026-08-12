@@ -11,7 +11,7 @@ import { AppContext } from "../context/AppContext.jsx";
 const ForgotPassword = () => {
   const { backendUrl } = useContext(AppContext);
 
-  console.log(backendurl);
+  console.log(backendUrl);
   const [state, setState] = useState("email");
   const [open, setOpen] = useState(false);
   const [openCon, setOpenCon] = useState(false);
