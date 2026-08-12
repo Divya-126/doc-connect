@@ -93,14 +93,194 @@ It provides separate experiences for:
 
 ```text
 Doc-Connect/
-│
-├── frontend/
-├── backend/
-├── admin/
-├── scripts/
-├── .github/
-├── README.md
-└── package.json
+├── admin
+│   ├── public
+│   │   ├── fevicon.png
+│   │   └── logo.png
+│   ├── src
+│   │   ├── assets
+│   │   │   ├── add_icon.svg
+│   │   │   ├── admin_logo.svg
+│   │   │   ├── appointment_icon.svg
+│   │   │   ├── appointments_icon.svg
+│   │   │   ├── assets.js
+│   │   │   ├── cancel_icon.svg
+│   │   │   ├── doctor_icon.svg
+│   │   │   ├── earning_icon.svg
+│   │   │   ├── home_icon.svg
+│   │   │   ├── list_icon.svg
+│   │   │   ├── patient_icon.svg
+│   │   │   ├── patients_icon.svg
+│   │   │   ├── people_icon.svg
+│   │   │   ├── react.svg
+│   │   │   ├── tick_icon.svg
+│   │   │   └── upload_area.svg
+│   │   ├── components
+│   │   │   ├── CallButton.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   ├── MiniLayout.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── PageLoader.jsx
+│   │   │   ├── ResetPassword.jsx
+│   │   │   └── Sidebar.jsx
+│   │   ├── context
+│   │   │   ├── AdminContext.jsx
+│   │   │   ├── AppContext.jsx
+│   │   │   └── DocterContext.jsx
+│   │   ├── pages
+│   │   │   ├── Admin
+│   │   │   │   ├── AddDoctor.jsx
+│   │   │   │   ├── AllAppointments.jsx
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   └── DoctorsList.jsx
+│   │   │   ├── Doctor
+│   │   │   │   ├── CallPage.jsx
+│   │   │   │   ├── ChatPage.jsx
+│   │   │   │   ├── DoctorAppointments.jsx
+│   │   │   │   ├── DoctorDashboard.jsx
+│   │   │   │   └── DoctorProfile.jsx
+│   │   │   ├── ForgetPassword.jsx
+│   │   │   ├── Login.jsx
+│   │   │   └── ResetPassword.jsx
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── backend
+│   ├── config
+│   │   ├── brevo.js
+│   │   ├── cloudinary.js
+│   │   ├── mongodb.js
+│   │   └── razorpay.js
+│   ├── controllers
+│   │   ├── email
+│   │   │   ├── Templates
+│   │   │   │   └── emailTemplates.js
+│   │   │   └── email.js
+│   │   ├── adminController.js
+│   │   ├── chatController.js
+│   │   ├── doctorController.js
+│   │   └── userController.js
+│   ├── lib
+│   │   └── stream.js
+│   ├── middlewares
+│   │   ├── authAdmin.js
+│   │   ├── authDoctor.js
+│   │   ├── authUser.js
+│   │   └── multer.js
+│   ├── models
+│   │   ├── appointmentModel.js
+│   │   ├── doctorModel.js
+│   │   └── userModel.js
+│   ├── routes
+│   │   ├── adminRoutes.js
+│   │   ├── chatRoutes.js
+│   │   ├── doctorRoutes.js
+│   │   └── userRoutes.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+├── frontend
+│   ├── public
+│   │   ├── fevicon.png
+│   │   ├── login.avif
+│   │   └── logo.png
+│   ├── src
+│   │   ├── assets
+│   │   │   ├── about_image.png
+│   │   │   ├── appointment_img.png
+│   │   │   ├── arrow_icon.svg
+│   │   │   ├── assets.js
+│   │   │   ├── chats_icon.svg
+│   │   │   ├── contact_image.png
+│   │   │   ├── cross_icon.png
+│   │   │   ├── Dermatologist.svg
+│   │   │   ├── doc1.png
+│   │   │   ├── doc10.png
+│   │   │   ├── doc11.png
+│   │   │   ├── doc12.png
+│   │   │   ├── doc13.png
+│   │   │   ├── doc14.png
+│   │   │   ├── doc15.png
+│   │   │   ├── doc2.png
+│   │   │   ├── doc3.png
+│   │   │   ├── doc4.png
+│   │   │   ├── doc5.png
+│   │   │   ├── doc6.png
+│   │   │   ├── doc7.png
+│   │   │   ├── doc8.png
+│   │   │   ├── doc9.png
+│   │   │   ├── dropdown_icon.svg
+│   │   │   ├── Gastroenterologist.svg
+│   │   │   ├── General_physician.svg
+│   │   │   ├── group_profiles.png
+│   │   │   ├── Gynecologist.svg
+│   │   │   ├── header_img.png
+│   │   │   ├── info_icon.svg
+│   │   │   ├── logo.svg
+│   │   │   ├── menu_icon.svg
+│   │   │   ├── Neurologist.svg
+│   │   │   ├── Pediatricians.svg
+│   │   │   ├── pooja.jpeg
+│   │   │   ├── profile_pic.png
+│   │   │   ├── razorpay_logo.png
+│   │   │   ├── stripe_logo.png
+│   │   │   ├── upload_area.png
+│   │   │   ├── upload_icon.png
+│   │   │   ├── verified_icon.svg
+│   │   │   └── WhatsApp Image 2026-03-10 at 1.36.40 PM.jpeg
+│   │   ├── componenets
+│   │   │   ├── Banner.jsx
+│   │   │   ├── CallButton.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── LandingImage.jsx
+│   │   │   ├── Layer.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── MiniLayer.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── OtpTimmer.jsx
+│   │   │   ├── PageLoader.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   ├── RelatedDoctors.jsx
+│   │   │   ├── ScrollToTop.jsx
+│   │   │   ├── SpecialitySlider.jsx
+│   │   │   └── TopDoctors.jsx
+│   │   ├── context
+│   │   │   └── AppContext.jsx
+│   │   ├── pages
+│   │   │   ├── About.jsx
+│   │   │   ├── Appointments.jsx
+│   │   │   ├── CallPage.jsx
+│   │   │   ├── ChatPage.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   ├── Doctors.jsx
+│   │   │   ├── ForgotPassword.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── MyAppointments.jsx
+│   │   │   └── MyProfile.jsx
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── .gitignore
+└── README.md
 ```
 
 <!-- PROJECT_STRUCTURE_END -->
@@ -263,15 +443,194 @@ Building modern web applications with
 
 ```text
 Doc-Connect/
-│
-├── frontend/
-├── admin/
-├── backend/
-├── scripts/
-├── .github/
+├── admin
+│   ├── public
+│   │   ├── fevicon.png
+│   │   └── logo.png
+│   ├── src
+│   │   ├── assets
+│   │   │   ├── add_icon.svg
+│   │   │   ├── admin_logo.svg
+│   │   │   ├── appointment_icon.svg
+│   │   │   ├── appointments_icon.svg
+│   │   │   ├── assets.js
+│   │   │   ├── cancel_icon.svg
+│   │   │   ├── doctor_icon.svg
+│   │   │   ├── earning_icon.svg
+│   │   │   ├── home_icon.svg
+│   │   │   ├── list_icon.svg
+│   │   │   ├── patient_icon.svg
+│   │   │   ├── patients_icon.svg
+│   │   │   ├── people_icon.svg
+│   │   │   ├── react.svg
+│   │   │   ├── tick_icon.svg
+│   │   │   └── upload_area.svg
+│   │   ├── components
+│   │   │   ├── CallButton.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   ├── MiniLayout.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── PageLoader.jsx
+│   │   │   ├── ResetPassword.jsx
+│   │   │   └── Sidebar.jsx
+│   │   ├── context
+│   │   │   ├── AdminContext.jsx
+│   │   │   ├── AppContext.jsx
+│   │   │   └── DocterContext.jsx
+│   │   ├── pages
+│   │   │   ├── Admin
+│   │   │   │   ├── AddDoctor.jsx
+│   │   │   │   ├── AllAppointments.jsx
+│   │   │   │   ├── Dashboard.jsx
+│   │   │   │   └── DoctorsList.jsx
+│   │   │   ├── Doctor
+│   │   │   │   ├── CallPage.jsx
+│   │   │   │   ├── ChatPage.jsx
+│   │   │   │   ├── DoctorAppointments.jsx
+│   │   │   │   ├── DoctorDashboard.jsx
+│   │   │   │   └── DoctorProfile.jsx
+│   │   │   ├── ForgetPassword.jsx
+│   │   │   ├── Login.jsx
+│   │   │   └── ResetPassword.jsx
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── backend
+│   ├── config
+│   │   ├── brevo.js
+│   │   ├── cloudinary.js
+│   │   ├── mongodb.js
+│   │   └── razorpay.js
+│   ├── controllers
+│   │   ├── email
+│   │   │   ├── Templates
+│   │   │   │   └── emailTemplates.js
+│   │   │   └── email.js
+│   │   ├── adminController.js
+│   │   ├── chatController.js
+│   │   ├── doctorController.js
+│   │   └── userController.js
+│   ├── lib
+│   │   └── stream.js
+│   ├── middlewares
+│   │   ├── authAdmin.js
+│   │   ├── authDoctor.js
+│   │   ├── authUser.js
+│   │   └── multer.js
+│   ├── models
+│   │   ├── appointmentModel.js
+│   │   ├── doctorModel.js
+│   │   └── userModel.js
+│   ├── routes
+│   │   ├── adminRoutes.js
+│   │   ├── chatRoutes.js
+│   │   ├── doctorRoutes.js
+│   │   └── userRoutes.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+├── frontend
+│   ├── public
+│   │   ├── fevicon.png
+│   │   ├── login.avif
+│   │   └── logo.png
+│   ├── src
+│   │   ├── assets
+│   │   │   ├── about_image.png
+│   │   │   ├── appointment_img.png
+│   │   │   ├── arrow_icon.svg
+│   │   │   ├── assets.js
+│   │   │   ├── chats_icon.svg
+│   │   │   ├── contact_image.png
+│   │   │   ├── cross_icon.png
+│   │   │   ├── Dermatologist.svg
+│   │   │   ├── doc1.png
+│   │   │   ├── doc10.png
+│   │   │   ├── doc11.png
+│   │   │   ├── doc12.png
+│   │   │   ├── doc13.png
+│   │   │   ├── doc14.png
+│   │   │   ├── doc15.png
+│   │   │   ├── doc2.png
+│   │   │   ├── doc3.png
+│   │   │   ├── doc4.png
+│   │   │   ├── doc5.png
+│   │   │   ├── doc6.png
+│   │   │   ├── doc7.png
+│   │   │   ├── doc8.png
+│   │   │   ├── doc9.png
+│   │   │   ├── dropdown_icon.svg
+│   │   │   ├── Gastroenterologist.svg
+│   │   │   ├── General_physician.svg
+│   │   │   ├── group_profiles.png
+│   │   │   ├── Gynecologist.svg
+│   │   │   ├── header_img.png
+│   │   │   ├── info_icon.svg
+│   │   │   ├── logo.svg
+│   │   │   ├── menu_icon.svg
+│   │   │   ├── Neurologist.svg
+│   │   │   ├── Pediatricians.svg
+│   │   │   ├── pooja.jpeg
+│   │   │   ├── profile_pic.png
+│   │   │   ├── razorpay_logo.png
+│   │   │   ├── stripe_logo.png
+│   │   │   ├── upload_area.png
+│   │   │   ├── upload_icon.png
+│   │   │   ├── verified_icon.svg
+│   │   │   └── WhatsApp Image 2026-03-10 at 1.36.40 PM.jpeg
+│   │   ├── componenets
+│   │   │   ├── Banner.jsx
+│   │   │   ├── CallButton.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── LandingImage.jsx
+│   │   │   ├── Layer.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── MiniLayer.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── OtpTimmer.jsx
+│   │   │   ├── PageLoader.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   ├── RelatedDoctors.jsx
+│   │   │   ├── ScrollToTop.jsx
+│   │   │   ├── SpecialitySlider.jsx
+│   │   │   └── TopDoctors.jsx
+│   │   ├── context
+│   │   │   └── AppContext.jsx
+│   │   ├── pages
+│   │   │   ├── About.jsx
+│   │   │   ├── Appointments.jsx
+│   │   │   ├── CallPage.jsx
+│   │   │   ├── ChatPage.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   ├── Doctors.jsx
+│   │   │   ├── ForgotPassword.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── MyAppointments.jsx
+│   │   │   └── MyProfile.jsx
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   └── vite.config.js
 ├── .gitignore
-├── README.md
-└── package.json
+└── README.md
 ```
 
 <!-- PROJECT_STRUCTURE_END -->
