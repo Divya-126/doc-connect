@@ -6,7 +6,7 @@ import { Eye, EyeOff, Lock, Mail, ShieldCheck } from "lucide-react";
 import LoaderText from "../componenets/Loader";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../context/AppContext.jsx";
 
 const ForgotPassword = () => {
   const { backendurl } = useContext(AppContext);
