@@ -10,6 +10,8 @@ import { AppContext } from "../context/AppContext";
 
 const ForgotPassword = () => {
   const { backendurl } = useContext(AppContext);
+
+  console.log(backendurl);
   const [state, setState] = useState("email");
   const [open, setOpen] = useState(false);
   const [openCon, setOpenCon] = useState(false);
