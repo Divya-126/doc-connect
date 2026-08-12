@@ -64,11 +64,6 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/about" element={<About />} />
-
-          <Route
-            path="/forget-password"
-            element={token ? <Navigate to="/" replace /> : <ForgotPassword />}
-          />
         </Route>
 
         <Route element={<MiniLayer />}>
