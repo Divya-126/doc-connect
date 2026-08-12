@@ -1,0 +1,119 @@
+name: Update README Project Structure
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate project structure
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+
+          root = "."
+          readme = "README.md"
+
+          ignored = {
+              ".git",
+              ".github",
+              "node_modules",
+              "dist",
+              "build",
+              ".next",
+              "coverage",
+              ".vscode"
+          }
+
+          def tree(directory, prefix=""):
+              try:
+                  items = sorted(
+                      [
+                          item for item in os.listdir(directory)
+                          if item not in ignored
+                      ],
+                      key=lambda x: (
+                          not os.path.isdir(os.path.join(directory, x)),
+                          x.lower()
+                      )
+                  )
+              except PermissionError:
+                  return ""
+
+              result = ""
+
+              for index, item in enumerate(items):
+                  path = os.path.join(directory, item)
+                  last = index == len(items) - 1
+
+                  connector = "└── " if last else "├── "
+                  result += prefix + connector + item + "\n"
+
+                  if os.path.isdir(path):
+                      next_prefix = prefix + ("    " if last else "│   ")
+                      result += tree(path, next_prefix)
+
+              return result
+
+          structure = "Doc-Connect/\n" + tree(root)
+
+          with open(readme, "r", encoding="utf-8") as file:
+              content = file.read()
+
+          start = "<!-- PROJECT_STRUCTURE_START -->"
+          end = "<!-- PROJECT_STRUCTURE_END -->"
+
+          if start not in content or end not in content:
+              print("❌ Structure markers not found in README.md")
+              raise SystemExit(1)
+
+          replacement = (
+              start
+              + "\n\n```text\n"
+              + structure
+              + "```\n\n"
+              + end
+          )
+
+          pattern = re.escape(start) + r".*?" + re.escape(end)
+
+          updated = re.sub(
+              pattern,
+              replacement,
+              content,
+              flags=re.DOTALL
+          )
+
+          with open(readme, "w", encoding="utf-8") as file:
+              file.write(updated)
+
+          print("✅ README.md project structure updated")
+          PY
+
+      - name: Commit README changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No README changes."
+          else
+            git commit -m "docs: auto-update project structure"
+            git push
+          fi

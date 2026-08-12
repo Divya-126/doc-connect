@@ -1,8 +1,189 @@
 # 🩺 Doc-Connect
 
-A modern **Doctor Appointment Booking System** built with the **MERN Stack**.
+<div align="center">
 
-Doc-Connect connects **patients, doctors, and administrators** through a secure and easy-to-use platform for managing appointments, doctor availability, payments, reminders, and online consultations.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=4F46E5&center=true&vCenter=true&width=700&lines=Welcome+to+Doc-Connect+%F0%9F%A9%BA;Doctor+Appointment+Booking+System;Built+with+MERN+Stack+%E2%9A%A1;Connecting+Patients+%26+Doctors+%F0%9F%91%A8%E2%80%8D%E2%9A%95%EF%B8%8F" alt="Doc-Connect Animated Introduction" />
+
+<br />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=4F46E5&height=120&section=header&text=Doc-Connect&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=65" width="100%" />
+
+### 🩺 A Smart & Secure Doctor Appointment Platform
+
+**Book Appointments • Manage Doctors • Online Consultation • Secure Payments**
+
+<br />
+
+<a href="#-features">
+  <img src="https://img.shields.io/badge/Features-4F46E5?style=for-the-badge" />
+</a>
+<a href="#-tech-stack">
+  <img src="https://img.shields.io/badge/MERN-Stack-111827?style=for-the-badge" />
+</a>
+<a href="#-installation">
+  <img src="https://img.shields.io/badge/Setup-22C55E?style=for-the-badge" />
+</a>
+
+</div>
+
+---
+
+## 🌟 About Doc-Connect
+
+**Doc-Connect** is a full-stack doctor appointment booking platform designed to make healthcare scheduling simple, secure, and accessible.
+
+It provides separate experiences for:
+
+```text
+👨‍⚕️ Doctors       👤 Patients       🛠️ Administrators
+     │                  │                    │
+     └──────────────────┼────────────────────┘
+                        │
+                        ▼
+                 🩺 DOC-CONNECT
+                        │
+             ┌──────────┼──────────┐
+             ▼          ▼          ▼
+          Booking    Payments   Consultation
+```
+
+---
+
+## ✨ What Makes Doc-Connect Special?
+
+<div align="center">
+
+| 🚀 Feature | 💡 Description                |
+| :--------: | :---------------------------- |
+|     📅     | **Smart Appointment Booking** |
+|     👨‍⚕️     | **Doctor Management**         |
+|     💳     | **Secure Online Payments**    |
+|     🔔     | **Appointment Reminders**     |
+|     🎥     | **Video Consultation**        |
+|     🔐     | **JWT Authentication**        |
+|     📊     | **Admin Dashboard**           |
+|     ☁️     | **Cloud Image Storage**       |
+
+</div>
+
+---
+
+## 🧑‍💻 Built With
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind,nodejs,express,mongodb,js,git,github" />
+
+</div>
+
+<br />
+
+<div align="center">
+
+**React.js** • **Node.js** • **Express.js** • **MongoDB**
+**Tailwind CSS** • **JWT** • **Cloudinary** • **Razorpay**
+
+</div>
+
+---
+
+## 📁 Project Structure
+
+<!-- PROJECT_STRUCTURE_START -->
+
+```text
+Doc-Connect/
+│
+├── frontend/
+├── backend/
+├── admin/
+├── scripts/
+├── .github/
+├── README.md
+└── package.json
+```
+
+<!-- PROJECT_STRUCTURE_END -->
+
+> 🔄 This section is automatically updated by GitHub Actions whenever changes are pushed.
+
+---
+
+## 🚀 Core Workflow
+
+```text
+             👤 Patient
+                 │
+                 ▼
+        🔎 Find Doctor
+                 │
+                 ▼
+        📅 Select Time Slot
+                 │
+                 ▼
+         💳 Make Payment
+                 │
+                 ▼
+       ✅ Appointment Confirmed
+                 │
+                 ▼
+          🔔 Reminder
+                 │
+                 ▼
+        🎥 Video Consultation
+                 │
+                 ▼
+             🩺 Doctor
+```
+
+---
+
+## 📸 Project Preview
+
+<div align="center">
+
+### 👤 Patient Portal
+
+_Add your screenshots here_
+
+### 👨‍⚕️ Doctor Dashboard
+
+_Add your screenshots here_
+
+### 🛠️ Admin Dashboard
+
+_Add your screenshots here_
+
+</div>
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+### **DIVYA DHOTE**
+
+**MERN Stack Developer**
+
+Building modern web applications with
+**React • Node.js • Express • MongoDB**
+
+<br />
+
+<img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&label=Profile%20Views&color=4F46E5&style=for-the-badge" />
+
+</div>
+
+---
+
+<div align="center">
+
+### ⭐ If you like Doc-Connect, consider giving it a star!
+
+**Made with ❤️ by Divya Dhote**
+
+</div>
 
 ---
 
@@ -12,7 +193,7 @@ Doc-Connect connects **patients, doctors, and administrators** through a secure 
 
 - 🔐 Secure registration and login
 - 🔎 Search and filter doctors
-- 👨‍⚕️ View doctor profiles and availability
+- 👨‍⚕️ View doctor profiles
 - 📅 Book appointments
 - 💳 Online appointment payments
 - 📋 View upcoming and previous appointments
@@ -27,7 +208,7 @@ Doc-Connect connects **patients, doctors, and administrators** through a secure 
 - 📅 Manage availability
 - 🕐 Manage working days and time slots
 - 📋 View appointments
-- ✅ Accept/manage appointments
+- ✅ Manage appointments
 - ❌ Cancel appointments
 - 👤 Manage doctor profile
 - 🎥 Online consultations
@@ -78,142 +259,37 @@ Doc-Connect connects **patients, doctors, and administrators** through a secure 
 
 ## 📁 Project Structure
 
-> **Auto-updating folder structure:**
-> The structure below is intended to be generated from the actual project directories so it stays synchronized when folders/files are added or removed.
+<!-- PROJECT_STRUCTURE_START -->
 
 ```text
 Doc-Connect/
 │
 ├── frontend/
-│   ├── public/
-│   │
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       ├── pages/
-│       ├── context/
-│       ├── hooks/
-│       ├── services/
-│       ├── utils/
-│       ├── App.jsx
-│       └── main.jsx
-│
 ├── admin/
-│   ├── public/
-│   │
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       ├── pages/
-│       ├── context/
-│       ├── hooks/
-│       ├── services/
-│       ├── utils/
-│       ├── App.jsx
-│       └── main.jsx
-│
 ├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
-│   ├── uploads/
-│   ├── server.js
-│   └── package.json
-│
+├── scripts/
+├── .github/
 ├── .gitignore
 ├── README.md
 └── package.json
 ```
 
-### 🔄 Generate Folder Structure Automatically
+<!-- PROJECT_STRUCTURE_END -->
 
-Instead of manually updating the structure every time your project changes, generate it from the filesystem.
-
-Create a script such as:
-
-```text
-scripts/
-└── generate-tree.js
-```
-
-Example:
-
-```js
-const fs = require("fs");
-const path = require("path");
-
-const root = path.resolve(__dirname, "..");
-
-const ignored = new Set(["node_modules", ".git", "dist", "build", ".env"]);
-
-function generateTree(dir, prefix = "") {
-  const items = fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter((item) => !ignored.has(item.name))
-    .sort((a, b) => {
-      if (a.isDirectory() !== b.isDirectory()) {
-        return a.isDirectory() ? -1 : 1;
-      }
-
-      return a.name.localeCompare(b.name);
-    });
-
-  let output = "";
-
-  items.forEach((item, index) => {
-    const isLast = index === items.length - 1;
-    const connector = isLast ? "└── " : "├── ";
-
-    output += `${prefix}${connector}${item.name}\n`;
-
-    if (item.isDirectory()) {
-      const nextPrefix = prefix + (isLast ? "    " : "│   ");
-      output += generateTree(path.join(dir, item.name), nextPrefix);
-    }
-  });
-
-  return output;
-}
-
-const tree = `Doc-Connect/\n${generateTree(root)}`;
-
-fs.writeFileSync(path.join(root, "PROJECT_STRUCTURE.txt"), tree);
-
-console.log("✅ Project structure updated!");
-```
-
-Run:
-
-```bash
-node scripts/generate-tree.js
-```
-
-This creates:
-
-```text
-PROJECT_STRUCTURE.txt
-```
-
-with the **current actual folder/file structure**.
+> 🔄 **The project structure above is automatically updated by GitHub Actions whenever changes are pushed to the repository.**
 
 ---
 
 ## 🔐 Authentication
 
-Doc-Connect uses **JWT-based authentication**.
+Doc-Connect uses **JWT-based authentication** for secure user sessions.
 
 Passwords are securely hashed using **BCrypt** before being stored in the database.
-
-Authentication flow:
 
 ```text
 User
   ↓
-Login / Register
+Register / Login
   ↓
 Backend Authentication
   ↓
@@ -238,9 +314,9 @@ The appointment system allows patients to:
 4. Confirm the appointment
 5. Complete payment
 6. Receive confirmation
-7. Join an online consultation when applicable
+7. Join an online consultation when available
 
-The system also prevents conflicting bookings and manages booked slots.
+The system also manages booked slots and helps prevent appointment conflicts.
 
 ---
 
@@ -250,14 +326,14 @@ Doc-Connect uses **Node-Cron** to schedule appointment reminders.
 
 Reminders can be scheduled:
 
-- 📅 1 day before appointment
-- ⏰ 1 hour before appointment
+- 📅 1 day before the appointment
+- ⏰ 1 hour before the appointment
 
 ---
 
 ## 💳 Payment System
 
-**Razorpay** is integrated for secure online appointment payments.
+**Razorpay** is integrated for online appointment payments.
 
 ```text
 Patient
@@ -337,10 +413,11 @@ workingDays
 
 Create `.env` files for sensitive configuration.
 
-Example backend:
+### Backend `.env`
 
 ```env
 PORT=4000
+
 MONGODB_URI=your_mongodb_connection_string
 
 JWT_SECRET=your_jwt_secret
@@ -353,7 +430,7 @@ RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
 ```
 
-> Never commit `.env` files to GitHub.
+> ⚠️ Never commit `.env` files to GitHub.
 
 ---
 
@@ -419,33 +496,37 @@ npm run dev
 
 ---
 
-## 🔄 Auto-Updating Project Structure
+## 🔄 Automatic README Structure Updates
 
-To keep the README synchronized with your actual project, you can use a generated marker:
+The project uses **GitHub Actions** to automatically keep the folder structure synchronized.
 
-```md
-<!-- PROJECT_STRUCTURE_START -->
+Workflow file:
 
-<!-- PROJECT_STRUCTURE_END -->
+```text
+.github/
+└── workflows/
+    └── update-readme.yml
 ```
 
-Then use a script to replace everything between these markers with the latest generated structure.
-
-Recommended workflow:
+Whenever you push changes:
 
 ```text
 Code Changes
-     ↓
-Create / Delete Files
-     ↓
-Run Structure Generator
-     ↓
-README.md Updated
-     ↓
-Commit Changes
+      ↓
+git push
+      ↓
+GitHub Actions
+      ↓
+Reads Current Project Structure
+      ↓
+Updates README.md
+      ↓
+Commits README.md
+      ↓
+README Updated Automatically ✅
 ```
 
-This prevents the README from becoming outdated as Doc-Connect grows.
+You don't need to manually update the Project Structure section.
 
 ---
 
@@ -458,7 +539,7 @@ This prevents the README from becoming outdated as Doc-Connect grows.
                               │
                               ▼
                     ┌───────────────────┐
-                    │ React Frontend    │
+                    │  React Frontend   │
                     └─────────┬─────────┘
                               │
                               ▼
