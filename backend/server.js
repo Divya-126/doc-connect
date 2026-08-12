@@ -16,7 +16,26 @@ connectCloudinary();
 
 // middlewares
 app.use(express.json()); //for pass rquest
-app.use(cors()); //allow frontend to connect with backend
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://doc-connect-user-126.vercel.app/",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests without an Origin header
+      // (Postman, server-to-server requests, etc.)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  }),
+); //allow frontend to connect with backend
 
 // api endpoints
 app.use("/api/admin", adminRouter);
