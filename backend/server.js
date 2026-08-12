@@ -19,7 +19,7 @@ app.use(express.json()); //for pass rquest
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://doc-connect-user-126.vercel.app/",
+  "https://doc-connect-user-126.vercel.app",
 ];
 
 app.use(
