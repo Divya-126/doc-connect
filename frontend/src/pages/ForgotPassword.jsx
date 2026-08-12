@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext.jsx";
 
 const ForgotPassword = () => {
-  const { backendurl } = useContext(AppContext);
+  const { backendUrl } = useContext(AppContext);
 
   console.log(backendurl);
   const [state, setState] = useState("email");
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          `${backendurl}/api/user/forgot-password`,
+          `${backendUrl}/api/user/forgot-password`,
           {
             email,
           },
@@ -67,7 +67,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          `${backendurl}/api/user/verify-reset-otp`,
+          `${backendUrl}/api/user/verify-reset-otp`,
           {
             email,
             otp,
@@ -104,7 +104,7 @@ const ForgotPassword = () => {
         }
 
         const { data } = await axios.post(
-          `${backendurl}/api/user/change-password`,
+          `${backendUrl}/api/user/change-password`,
           {
             email,
             otp,
