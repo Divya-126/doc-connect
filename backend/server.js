@@ -38,6 +38,8 @@ app.use(
   }),
 ); //allow frontend to connect with backend
 
+console.log("Allowed CORS Origins:", allowedOrigins);
+
 // api endpoints
 app.use("/api/admin", adminRouter);
 app.use("/api/doctor", doctorRouter);
@@ -49,7 +51,7 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("API Working great life dddddddddddddddd");
+  res.send("API Working great ");
 });
 
 app.listen(port, () => console.log("Server is Started", port));
