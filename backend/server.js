@@ -34,38 +34,21 @@ app.use(express.json());
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
-
-  // Patient frontend
-  process.env.FRONTEND_URL,
-
-  // Admin + Doctor frontend
-  process.env.ADMIN_URL,
-].filter(Boolean);
-
-console.log("Allowed CORS Origins:", allowedOrigins);
+  "https://doc-connect-admin-doctor-126.vercel.app",
+];
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests without an origin
-      // such as Postman / server-to-server requests
-      if (!origin) {
-        return callback(null, true);
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.log("❌ CORS blocked:", origin);
+        callback(new Error("Not allowed by CORS"));
       }
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      console.log("❌ CORS blocked:", origin);
-
-      return callback(new Error("Not allowed by CORS"));
     },
-
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-
     allowedHeaders: ["Content-Type", "Authorization"],
-
     credentials: true,
   }),
 );
