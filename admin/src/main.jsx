@@ -8,8 +8,8 @@ import App from "./App.jsx";
 import "react-toastify/dist/ReactToastify.css";
 import "stream-chat-react/dist/css/v2/index.css";
 
-import AdminContextProvider from "./context/AdminContext.jsx";
 import DoctorContextProvider from "./context/DocterContext.jsx";
+import AdminContextProvider from "./context/AdminContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
