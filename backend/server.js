@@ -20,8 +20,10 @@ app.use(express.json()); //for pass rquest
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  // Deployed Admin + Doctor frontend
+  "https://doc-connect-admin-doctor-126.vercel.app",
   process.env.FRONTEND_URL,
-  process.env.ADMIN_URL,
+  // process.env.ADMIN_URL,
 ].filter(Boolean);
 
 app.use(
