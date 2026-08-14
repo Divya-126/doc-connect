@@ -10,7 +10,6 @@ import "stream-chat-react/dist/css/v2/index.css";
 
 import AdminContextProvider from "./context/adminContext.jsx";
 import DoctorContextProvider from "./context/DocterContext.jsx";
-import AppContextProvider from "./context/AppContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
