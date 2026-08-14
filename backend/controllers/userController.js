@@ -9,6 +9,7 @@ import jwt from "jsonwebtoken";
 import { razorpayInstance } from "../config/razorpay.js";
 import { sendEmailVerificationcode, sendWellcomeEmail } from "./email/email.js";
 import { upsertStreamUser } from "../lib/stream.js";
+import "dotenv/config";
 
 // ==========================
 // Generate Otp

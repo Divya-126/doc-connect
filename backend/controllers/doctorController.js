@@ -9,6 +9,7 @@ import appointmentModel from "../models/appointmentModel.js";
 import { sendPasswordResetOtp, sendDoctorAccount } from "./email/email.js";
 
 import { upsertStreamUser } from "../lib/stream.js";
+import "dotenv/config";
 
 // ======================================================
 // DOCTOR LOGIN

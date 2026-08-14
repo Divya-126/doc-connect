@@ -7,6 +7,7 @@ import appointmentModel from "../models/appointmentModel.js";
 import userModel from "../models/userModel.js";
 import { sendDoctorAccount } from "./email/email.js";
 import { upsertStreamUser } from "../lib/stream.js";
+import "dotenv/config";
 
 // FUNCTION FOR THE DOCTOR
 const generatePassword = (length = 8) => {
